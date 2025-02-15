@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Raleway", serif;
+      }
+      .login-container {
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        position: relative;
+      }
+      .create-account {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        grid-area: 1/1;
+        border: 1px solid black;
+        padding: 7rem;
+        gap: 2rem;
+        input {
+          font-size: 1rem;
+          padding: 0.8rem 1.6rem;
+          border-radius: 30px;
+          border: 1px solid rgba(114, 111, 111, 0.63);
+        }
+        button {
+          padding: 0.5rem;
+        }
+      }
+      .login-account {
+      }
+      .create-account-title {
+        font-size: 2rem;
+      }
+      .container-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .login-btn {
+        position: absolute;
+      }
+      .signup-btn {
+        position: absolute;
+        top: -3.3rem;
+        left: 0;
+        padding: 1rem;
+      }
+      .login-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="create-account">
+        <div class="signup-btn">Signup</div>
+        <h2 class="create-account-title">Create Account</h2>
+        <div class="container-inner">
+          <input type="text" placeholder="Full Name" class="input-field" />
+          <input type="email" placeholder="Email" class="input-field" />
+          <input type="password" placeholder="Password" class="input-field" />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            class="input-field"
+          />
+          <button class="register-button">Sign Up</button>
+        </div>
+      </div>
+      <div class="login-account">
+        <div class="login-btn">Login</div>
+        <div class="login-container">
+          <input type="email" placeholder="Email" class="input-field" />
+          <input type="password" placeholder="Password" class="input-field" />
+          <button class="login-button">Login</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
