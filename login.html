@@ -9,10 +9,10 @@
   <body>
     <div class="container">
       <div class="buttons">
-        <button class="btn">Signup</button>
-        <button class="btn">Login</button>
+        <button class="btn" id="btn-signup">Signup</button>
+        <button class="btn" id="btn-login">Login</button>
       </div>
-      <div class="sign-up fields">
+      <div class="sign-up fields active">
         <h2>Sign Up</h2>
         <input class="inputs" type="text" placeholder="Full Name" required />
         <input class="inputs" type="email" placeholder="Email" required />
@@ -32,5 +32,21 @@
         <button class="submit-btn" type="submit">Login</button>
       </div>
     </div>
+    <script>
+      const signup = document.getElementById("btn-signup");
+      const login = document.getElementById("btn-login");
+
+      const signUpForm = document.querySelector(".sign-up");
+      const loginForm = document.querySelector(".login");
+
+      signup.addEventListener("click", () => {
+        signUpForm.classList.add("active");
+        loginForm.classList.remove("active");
+      });
+      login.addEventListener("click", () => {
+        loginForm.classList.add("active");
+        signUpForm.classList.remove("active");
+      });
+    </script>
   </body>
 </html>
